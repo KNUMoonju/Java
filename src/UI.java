@@ -13,16 +13,17 @@ public class UI {
 	}
 	
 	public User create_user() {
-		System.out.println("À¯Àú»ı¼º");
+		System.out.println("ìœ ì € ìƒì„±");
+		System.out.println("GIT TEST");
 		
 		System.out.print("ID : ");
 		String id = get_string();
 		
-		//TODO ºñ¹Ğ¹øÈ£¸ğ¾çÀ¸·Î Ç¥½Ã, ºñ¹Ğ¹øÈ£ Á¶°Ç°Ë»ç
+		//TODO ë¹„ë°€ë²ˆí˜¸ ëª¨ì–‘ìœ¼ë¡œ í‘œì‹œ, ì¡°ê±´ê²€ì‚¬
 		System.out.print("Password : ");
 		String passwd = get_string();
 		
-		//TODO ÀÌ¸ŞÀÏ ¾ç½Ä °Ë»ç
+		//TODO ì´ë©”ì¼ ì¡°ê±´ ê²€ì‚¬
 		System.out.print("Email : ");
 		String email = get_string();
 
@@ -38,12 +39,12 @@ public class UI {
 	}
 	
 	public void main_menu() {
-		System.out.println("¸Ş´º ¹øÈ£ ÀÔ·Â");
-		System.out.println("1 : À¯Àú»ı¼º");
+		System.out.println("ë©”ë‰´ì„ íƒ");
+		System.out.println("1 : ìœ ì € ìƒì„±");
 		
 		int inp_menu = get_int();
 		
-		System.out.println("ÀÔ·Â : " + inp_menu);
+		System.out.println("ì…ë ¥ : " + inp_menu);
 		
 		switch(inp_menu) {
 		case 1:
@@ -52,7 +53,7 @@ public class UI {
 		}
 	}
 	
-	private String get_string() {	//»ç¿ëÀÚ·ÎºÎÅÍ String°ªÀ» ÀÔ·Â¹ŞÀ» ¶§ »ç¿ë.
+	private String get_string() {	//ì½˜ì†”ì…ë ¥ìœ¼ë¡œ Stringê°’ì„ ì…ë ¥ë°›ì•„ return í•´ì¤€ë‹¤.
 		String ret = "";
 		
 		while(true) {
@@ -69,7 +70,7 @@ public class UI {
 		return ret;		
 	}
 	
-	private int get_int() {	//»ç¿ëÀÚ·ÎºÎÅÍ int°ªÀ» ÀÔ·Â¹ŞÀ» ¶§ »ç¿ë. int ¾Æ´Ï¸é catch·Î µé¾î°£´Ù.
+	private int get_int() {	//ì½˜ì†”ì…ë ¥ìœ¼ë¡œ intê°’ì„ ì…ë ¥ë°›ì•„ return í•´ì¤€ë‹¤. intê°€ ì•„ë‹ˆë©´ Catchë¡œ ë“¤ì–´ê°.
 		int ret = 0;
 				
 		while(true) {
@@ -78,7 +79,7 @@ public class UI {
 				ret = Integer.parseInt(in.readLine());
 				break;
 			} catch (NumberFormatException e) {
-				System.out.println("¶È¹Ù·Î ÃÄ¶ó");
+				System.out.println("ë˜‘ë°”ë¡œ ì³ë¼");
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
