@@ -9,7 +9,7 @@ public class UI {
 	
 	public UI() {
 		System.out.println("UI Instance Made");
-
+		System.out.println("GIT TEST");
 	}
 	
 	public User create_user() {
