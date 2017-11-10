@@ -11,6 +11,7 @@ public class UI {
 		System.out.println("UI Instance Made");
 		System.out.println("GIT TEST");
 		System.out.println("문주가 추가함");
+		System.out.println("문주가 추가 다시함");
 	}
 	
 	public User create_user() {
