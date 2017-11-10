@@ -10,8 +10,7 @@ public class UI {
 	public UI() {
 		System.out.println("UI Instance Made");
 		System.out.println("GIT TEST");
-		System.out.println("Git test2");
-		System.out.println("TEST");
+		System.out.println("문주가 추가함");
 	}
 	
 	public User create_user() {
