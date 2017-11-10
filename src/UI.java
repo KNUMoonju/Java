@@ -33,6 +33,7 @@ public class UI {
 		String phone = get_string();
 		
 		System.out.print("Address : ");
+		System.out.println("hahaha");
 		String address = get_string();
 		
 		User new_user = new User(id, passwd, email, phone, address);
