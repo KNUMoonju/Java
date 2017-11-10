@@ -11,6 +11,7 @@ public class UI {
 		System.out.println("UI Instance Made");
 		System.out.println("GIT TEST");
 		System.out.println("Git test2");
+		System.out.println("TEST");
 	}
 	
 	public User create_user() {
