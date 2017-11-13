@@ -2,6 +2,8 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+import javax.swing.event.TreeWillExpandListener;
+
 public class UI {
 	
 	private BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
@@ -42,6 +44,9 @@ public class UI {
 	}
 	
 	public void main_menu() {
+		
+		booting();
+		
 		System.out.println("메뉴선택");
 		System.out.println("1 : 유저 생성");
 		
@@ -89,5 +94,46 @@ public class UI {
 		}
 		
 		return ret;
+	}
+	
+	private void booting() {		//화면 맨처음 켜면 나오는 화면.
+		clear_screen();
+		System.out.println("*****************************************************************");
+		System.out.println("*\t\t\t\t\t\t\t\t*");
+		System.out.print("*\t\t\t");
+		sleep_msec(100);
+		System.out.print("3");
+		sleep_msec(100);
+		System.out.print("조");
+		sleep_msec(100);
+		System.out.print("재");
+		sleep_msec(100);
+		System.out.print("고");
+		sleep_msec(100);
+		System.out.print("관");
+		sleep_msec(100);
+		System.out.print("리");
+		sleep_msec(100);
+		System.out.print(" 시");
+		sleep_msec(100);
+		System.out.print("스");
+		sleep_msec(100);
+		System.out.println("템\t\t\t\t*");
+		System.out.println("");
+	}
+	
+	private void clear_screen() {	//화면지우기.
+		for(int i = 0; i < 80; i ++) {
+			System.out.println("");
+		}
+	}
+	
+	private void sleep_msec(int m) {	//m 만큼 sleep한다. 1000 = 1초
+		try {
+			Thread.sleep(m);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 }
