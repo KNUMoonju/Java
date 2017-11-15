@@ -1,6 +1,7 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 
 import javax.swing.event.TreeWillExpandListener;
 
@@ -16,10 +17,8 @@ public class UI {
 	}
 	
 	//TODO 유저 로그인할 때 파일에서 유저목록을 읽어와서 해당 유저를 찾아낸다.
-	private User login_user() {
-		User n = new User("a","b","c","d","e");
-		
-		return n;
+	private User login_user() {		
+		return null;
 	}
 	
 	private User create_user() {
@@ -49,6 +48,25 @@ public class UI {
 		return new_user;
 	}
 	
+	public void test() {
+		File_io fi = new File_io();
+		ArrayList<User> userlist = new ArrayList<User>();
+		
+		userlist.add(new User("a", "b", "c", "d", "e"));
+		userlist.add(new User("1","2","3","4","5"));
+		
+		fi.save_userlist(userlist);
+		
+		userlist = null;
+		
+		userlist = fi.load_userlist();
+		
+		for(User u:userlist) {
+			System.out.println(u.getAddress());
+		}
+		
+	}
+	
 	public void main_menu() {
 		
 		booting();
@@ -56,6 +74,7 @@ public class UI {
 		System.out.println("* 메뉴선택\t\t\t\t\t\t\t\t*");
 		System.out.println("* 1 : 유저 로그인\t\t\t\t\t\t\t*");
 		System.out.println("* 2 : 유저 생성\t\t\t\t\t\t\t*");
+		System.out.println("* 3 : 테스트\t\t\t\t\t\t\t*");
 		
 		//메뉴가 추가될 때 여기에 추가하면 된다.
 		
@@ -72,6 +91,9 @@ public class UI {
 			break;
 		case 2:
 			create_user();
+			break;
+		case 3:
+			test();
 			break;
 		}
 	}
