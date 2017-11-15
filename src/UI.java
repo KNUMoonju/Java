@@ -11,8 +11,7 @@ public class UI {
 	
 	public UI() {
 		System.out.println("UI Instance Made");
-		System.out.println("GIT TEST");
-		System.out.println("문주가 추가함");
+		System.out.println("GIT 설명");
 		System.out.println("문주가 추가 다시함");
 	}
 	
